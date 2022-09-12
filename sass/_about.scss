@@ -1,0 +1,100 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: toRem(1160);
+    margin: toRem(140) auto;
+    text-align: center;
+    position: relative;
+
+    &__scribble {
+        position: absolute;
+        width: toRem(42);
+        height: toRem(150);
+        left: 50%;
+        top: -19%;
+    }
+
+    h1 {
+        max-width: 70%;
+        margin: 0 auto;
+        margin-bottom: toRem(100);
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        column-gap: toRem(216);
+        margin-bottom: toRem(120);
+
+        &--card {
+            img {
+                margin-bottom: toRem(40);
+            }
+        }
+    }
+}
+
+.quote {
+    background-color: $color-champagne;
+    padding: toRem(40) 0;
+    position: relative;
+
+    &__vector {
+        position: absolute;
+        bottom: 10%;
+        left: -6%;
+    }
+
+    &__star {
+        position: absolute;
+        top: -15%;
+        right: -6%;
+    }
+
+    &__intro {
+        margin-bottom: toRem(40);
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        max-width: 60%;
+        margin: 0 auto;
+        margin-bottom: toRem(53);
+    }
+
+    &__profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__avatar {
+            border-radius: 50%;
+            height: 48px;
+            width: 48px;
+            margin-right: toRem(10);
+        }
+
+        &__name {
+            font-size: toRem(14);
+            line-height: toRem(22.4);
+            margin-right: toRem(10);
+        }
+
+        &__logo {
+            border-radius: 50%;
+            height: 16px;
+            width: 16px;
+            margin-right: toRem(8);
+        }
+
+        &__position {
+            font-size: toRem(14);
+            font-weight: 700;
+            line-height: toRem(22.4);
+        }
+    }
+    
+}

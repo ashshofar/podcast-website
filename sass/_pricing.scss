@@ -1,0 +1,107 @@
+.pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: toRem(1160);
+    margin: toRem(140) auto;
+    text-align: center;
+    position: relative;
+
+    h1 {
+        margin-bottom: toRem(20);
+    }
+
+    h3 {
+        color: $color-grey;
+        font-weight: 500;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(toRem(367), 1fr));
+        column-gap: toRem(20);
+        margin-top: toRem(100);
+
+        &__card {
+
+            text-align: left;
+
+            &__headline {
+                padding-top: toRem(60);
+                padding-bottom: toRem(30);
+                padding-left: toRem(40);
+                padding-right: toRem(40);
+
+                background-color: $color-champagne;
+                border-radius: toRem(8);
+                border: 1.5px solid $color-black;
+
+                min-height: toRem(357);
+                margin-bottom: toRem(20);
+
+                &:hover {
+                    border: 1.5px solid $color-red;
+                }
+
+                &--header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: toRem(20);
+
+                    span {
+                        background-color: $color-red;
+                        border-radius: toRem(4);
+                        padding: toRem(3) toRem(6);
+                        color: #fff;
+                        font-size: toRem(12);
+                    }
+                }
+
+                &--description {
+                    font-size: toRem(14);
+                    margin-bottom: toRem(90);
+                }
+
+                &--footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: toRem(14);
+                    
+                        span {
+                            color: $color-red;
+                            font-size: toRem(18);
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            &__description {
+                padding: toRem(60) toRem((40));
+                
+                background-color: $color-champagne;
+                border-radius: toRem(8);
+                border: 1.5px solid $color-black;
+                min-height: toRem(332);
+            
+                &:hover {
+                    border: 1.5px solid $color-red;
+                }
+
+                h4 {
+                    margin-bottom: toRem(20);
+                }
+                
+                ul {
+                    margin-left: toRem(13);
+                }
+            }
+        }
+    }
+
+}

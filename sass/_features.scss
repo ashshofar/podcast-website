@@ -1,0 +1,50 @@
+.features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: toRem(1160);
+    margin: toRem(140) auto;
+    text-align: center;
+    position: relative;
+
+    &__svg {
+        position: absolute;
+        top: -8%;
+        right: 15%;
+    }
+    
+    h1 {
+        margin-bottom: toRem(20);
+    }
+
+    h3 {
+        color: $color-grey;
+        font-weight: 500;
+    }
+
+    &__benefits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(toRem(373), 1fr));
+        column-gap: toRem(20);
+        row-gap: toRem(80);
+        margin: toRem(100) 0;
+    
+        &__card {
+
+            img {
+                height: toRem(78);
+                width: toRem(78);
+                margin-bottom: toRem(30);
+            }
+            
+            h3 {
+                margin-bottom: toRem(10);
+            }
+        }
+    }
+
+    .btn {
+        align-self: center;
+    }
+}

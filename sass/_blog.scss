@@ -1,0 +1,105 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: toRem(1160);
+    margin: toRem(140) auto;
+    text-align: center;
+
+    h1 {
+        margin-bottom: toRem(20);
+    }
+
+    h3 {
+        color: $color-grey;
+        font-weight: 500;
+    }
+
+    &__list {
+        position: relative;
+        margin: toRem(100) 0;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(toRem(570), 1fr));
+        column-gap: toRem(20);
+
+        &--card {
+            text-align: left;
+            padding: toRem(16) toRem(16);
+            border: 2px solid $color-black;
+            border-radius: toRem(8);
+
+            &:hover {
+                transform: translate(-2%, -1%);
+                box-shadow: 10px 10px 0px $color-black;
+                cursor: pointer;
+                
+                h2 {
+                    color: $color-red;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: toRem(320);
+                object-fit: contain;
+            }
+
+            &--description {
+                margin-top: toRem(40);
+                margin-bottom: toRem(26);
+
+                span {
+                    font-weight: 700;
+                    color: $color-grey;
+                    font-size: toRem(14);
+                }
+
+                h2 {
+                    margin-top: toRem(6);
+                    margin-bottom: toRem(20);
+                }
+
+                p {
+                    font-size: toRem(14);
+                    line-height: 160%;
+                    color: $color-grey;
+                }
+            }
+
+            &--footer {
+                display: flex;
+                justify-content: space-between;
+                padding-top: toRem(20);
+                border-top: 1px solid $color-grey;
+
+                a {
+                    text-decoration: none;
+                    color: $color-grey;
+                    font-size: toRem(12);
+                    line-height: 160%;
+                    border: 1px solid $color-grey;
+                    border-radius: toRem(4);
+                    padding: toRem(6) toRem(12);
+                }
+
+                span {
+                    font-size: toRem(12);
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &__svg {
+            position: absolute;
+            bottom: -13%;
+            right: -9%;
+            transform: rotate(120deg);
+        }
+    }
+
+    .btn {
+        align-self: center;
+    }
+}
